@@ -1,0 +1,8 @@
+demo-big-en/
+*.sql
+*.csv
+*.dump
+*.zip
+__pycache__/
+*.pyc
+.env
