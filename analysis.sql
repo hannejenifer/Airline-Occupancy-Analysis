@@ -1,21 +1,5 @@
 -- ============================================================
--- AIRLINE FLIGHT OCCUPANCY ANALYSIS
--- ============================================================
--- Business Objective:
--- Identify structural inefficiencies in flight capacity
--- to improve seat utilization and airline profitability.
---
--- Database: PostgreSQL
--- Schema  : bookings
--- Grain   : One row per flight
--- ============================================================
-
-
--- ============================================================
 -- 1. CREATE TEMP TABLE: FLIGHT OCCUPANCY
--- ============================================================
--- TEMP TABLE allows reuse across multiple queries
--- without repeating complex joins.
 -- ============================================================
 
 DROP TABLE IF EXISTS flight_occupancy;
@@ -149,8 +133,3 @@ GROUP BY aircraft_code, departure_airport, arrival_airport
 HAVING COUNT(*) >= 20
 ORDER BY avg_occupancy
 LIMIT 10;
-
-
--- ============================================================
--- END OF ANALYSIS
--- ============================================================
