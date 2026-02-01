@@ -1,8 +1,11 @@
+# Ignore large raw dataset folders
 demo-big-en/
-*.sql
-*.csv
-*.dump
-*.zip
+
+# Ignore raw database dumps only
+*dump.sql
+*data.sql
+
+# Python cache
 __pycache__/
 *.pyc
 .env
